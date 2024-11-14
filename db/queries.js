@@ -15,4 +15,8 @@ async function getEventById(eventId) {
   return replaceMongoIdInObject(event);
 }
 
-export { getAllEvents, getEventById };
+async function createUser(user) {
+  return await userModel.create(user);
+}
+
+export { getAllEvents, getEventById, createUser };
