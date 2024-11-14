@@ -8,7 +8,7 @@ const EventDetails = ({ details, swaqs }) => {
 
           {swaqs && (
             <ul className="">
-              {swaqs.map((swaq) => (
+              {swaqs?.map((swaq) => (
                 <li key={swaq}>{swaq}</li>
               ))}
             </ul>
