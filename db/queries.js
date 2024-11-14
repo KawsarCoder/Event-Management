@@ -1,4 +1,5 @@
 import { eventModel } from "@/models/event-models";
+import { userModel } from "@/models/user-model";
 import {
   replaceMongoIdInArray,
   replaceMongoIdInObject,
