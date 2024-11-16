@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 import withPlaiceholder from "@plaiceholder/next";
-const nextConfig = {
+
+const nextConfig = withPlaiceholder({
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -9,6 +11,14 @@ const nextConfig = {
       },
     ],
   },
-};
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+      },
+    ];
+  },
+});
 
 export default nextConfig;

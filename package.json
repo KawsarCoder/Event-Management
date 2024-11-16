@@ -1,6 +1,8 @@
 {
   "name": "eventry",
   "version": "0.1.0",
+  "main": "dist/server.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +13,8 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@tailwindcss/typography": "^0.5.12",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.10.0",
     "mongoose": "^8.8.1",
     "next": "14.2.1",
     "plaiceholder": "^3.0.0",
@@ -22,6 +26,7 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
+    "eslint-plugin-react": "^7.37.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

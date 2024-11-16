@@ -1,5 +1,5 @@
 "use server";
-
+/* eslint-disable */
 import {
   createUser,
   findUserByCredentials,
@@ -14,7 +14,7 @@ import EmailTemplate from "../payment/EmailTemplate";
 
 async function registerUser(formData) {
   const user = Object.fromEntries(formData);
-  const created = await createUser(user);
+  const created = await createUser(user); // eslint-disable-line no-unused-vars
   redirect("/login");
 }
 

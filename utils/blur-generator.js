@@ -1,4 +1,4 @@
-const { getPlaiceholder } = require("plaiceholder");
+import { getPlaiceholder } from "plaiceholder";
 
 async function getBlurData(imageSrc) {
   const buffer = await fetch(src).then(async (res) =>

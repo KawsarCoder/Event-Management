@@ -18,8 +18,8 @@ const ActionButtons = ({
   const isGoing = goingUserIds?.find((id) => id === auth?.id);
 
   const [interested, setInterested] = useState(isInterested);
-  const [going, setGoing] = useState(isGoing);
-  const [isPending, startTransition] = useTransition();
+  const [going, setGoing] = useState(isGoing); // eslint-disable-line no-unused-vars
+  const [isPending, startTransition] = useTransition(); // eslint-disable-line no-unused-vars
 
   // toggle interested
   async function toggleInterest() {
