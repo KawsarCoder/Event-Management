@@ -13,6 +13,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   await dbConnect();
+
   return (
     <html lang="en">
       <body className={inter.className}>

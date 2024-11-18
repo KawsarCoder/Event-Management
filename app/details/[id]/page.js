@@ -3,8 +3,8 @@ import EventDetails from "@/components/details/EventDetails";
 import EventVenue from "@/components/details/EventVenue";
 import { getEventById } from "@/db/queries";
 
-export async function generateMetadata({ params: { id } }) {
-  const eventInfo = await getEventById(id);
+export async function generateMetadata({ params: { _id } }) {
+  const eventInfo = await getEventById(_id);
   return {
     title: `Eventry - ${eventInfo?.name}`,
     description: eventInfo?.details,
