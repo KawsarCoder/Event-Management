@@ -1,7 +1,7 @@
 import { getPlaiceholder } from "plaiceholder";
 
 async function getBlurData(imageSrc) {
-  const buffer = await fetch(src).then(async (res) =>
+  const buffer = await fetch(imageSrc).then(async (res) =>
     Buffer.from(await res.arrayBuffer())
   );
 

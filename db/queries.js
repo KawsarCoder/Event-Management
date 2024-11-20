@@ -10,17 +10,17 @@ async function getAllEvents(query) {
   let allEvents = [];
   if (query) {
     const regex = new RegExp(query, "i");
-    allEvents = await eventModel.find({ name: { $regex: regex } });
+    allEvents = await eventModel.find({ name: { $regex: regex } }).lean();
+    console.log(allEvents);
   } else {
-    allEvents = await eventModel.find();
+    allEvents = await eventModel.find().lean();
   }
-  console.log(allEvents);
 
   return replaceMongoIdInArray(allEvents);
 }
 
 async function getEventById(eventId) {
-  const event = await eventModel.findById(eventId);
+  const event = await eventModel.findById(eventId).lean();
   return replaceMongoIdInObject(event);
 }
 
@@ -29,7 +29,7 @@ async function createUser(user) {
 }
 
 async function findUserByCredentials(credentials) {
-  const user = await userModel.findOne(credentials);
+  const user = await userModel.findOne(credentials).lean();
   if (user) {
     return replaceMongoIdInObject(user);
   }

@@ -24,4 +24,4 @@ const schema = new Schema({
 });
 
 export const userModel =
-  mongoose.models.users ?? mongoose.model("users", schema);
+  mongoose.models.users || mongoose.model("users", schema);
